@@ -1,0 +1,20 @@
+.port {
+    background-color: darkgray;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    justify-content: center;  
+}
+
+.port h1 {
+    font-family: 'Archivo', sans-serif;
+}
+
+.port p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.image {
+    width: 150px;
+    border-radius: 100%;
+}
