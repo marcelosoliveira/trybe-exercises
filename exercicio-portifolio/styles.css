@@ -9,15 +9,46 @@
 
 .port h1 {
     font-family: 'Archivo', sans-serif;
+    text-align: center;
+    color: brown;
 }
 
 .port p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(116, 72, 16);
+
 }
 
 .image {
-    width: 150px;
+    width: 200px;
     border-radius: 100%;
-    align-items: center;
+    justify-content: center;
+    margin-left: 200px;
+}
+
+.port a {
+    text-align: center;
+    margin-right: 100px;
+    text-decoration-line: none;
+    color: rgb(182, 182, 135);
+    background-color: rgb(123, 76, 141);
+    padding: 8px 15px;
+    border-radius: 10%;
+}
+
+.port ul {
+    padding: 10px;
+}
+
+.port li {
+    padding: 10px;
+}
+
+.port ol {
+    color: rgb(141, 104, 12);
+}
+
+.skills {
+    color: rgb(110, 81, 18);
 }
 
