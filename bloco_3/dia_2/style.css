@@ -1,0 +1,30 @@
+body {
+    background: rgb(215, 250, 220);
+    font-family: sans-serif;
+}
+
+.header {
+    background-color: rgb(23, 66, 23);
+    color: white;
+    padding: 5px 10px;
+}
+
+.footer {
+    background-color: rgb(186, 222, 187);
+    padding: 6px;
+    clear: both;
+}*/
+
+#hopper-pic {
+    width: 100px;
+    float: left;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    
+}
+
+#hopper-links {
+    float: right;
+    width: 30%;
+    margin-left: 10px;
+}
