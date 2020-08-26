@@ -8,4 +8,4 @@
 
 #Exercícios do bloco 1
 
-#Exercícios do dia 5
+#Exercícios do dia 3 e dia 4

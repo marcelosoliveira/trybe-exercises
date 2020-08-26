@@ -5,7 +5,3 @@
 # Composto por 5 Blocos
 
 #Esses são os blocos disponíveis.
-
-#Exercícios do bloco 1
-
-#Exercícios do dia 5

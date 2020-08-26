@@ -6,6 +6,6 @@
 
 #Esses são os blocos disponíveis.
 
-#Exercícios do bloco 1
+#Exercícios do bloco 2
 
-#Exercícios do dia 5
+#Exercícios do dia 1
