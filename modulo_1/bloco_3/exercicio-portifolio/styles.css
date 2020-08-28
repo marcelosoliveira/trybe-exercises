@@ -1,0 +1,72 @@
+body {
+    background-color: darkgray;   
+}
+
+.header {
+    font-family: 'Archivo', sans-serif;
+    text-align: center;
+    color: brown;
+}
+
+.content {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(116, 72, 16);
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 25px;
+
+}
+
+.header .image {
+    width: 200px;
+    border-radius: 100%;
+    justify-content: center;
+}
+
+.container-skills {
+    margin-left: 400px;
+    margin-right: 400px;
+    padding-left:  100px;
+  
+    font-size: 25px;
+}
+
+.container-skills ol {
+    color: rgb(141, 104, 12);
+ 
+}
+
+.container-skills .skills {
+    color: rgb(110, 81, 18);
+}
+
+.footer a {
+    text-align: center;
+    margin-right: 100px;
+    text-decoration-line: none;
+    color: rgb(182, 182, 135);
+    background-color: rgb(123, 76, 141);
+    padding: 8px 15px;
+    border-radius: 10%;
+    
+}
+
+.footer ul {
+    padding: 10px;
+    
+}
+
+.footer li {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.footer {
+    width: 100%;
+    margin-left: 400px;
+    margin-right: 500px;
+    padding-left:  100px;
+    font-size: 25px;
+}
+
+
