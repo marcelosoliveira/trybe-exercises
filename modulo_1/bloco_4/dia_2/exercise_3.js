@@ -1,13 +1,13 @@
-let notas = [8, 9, 7, 8];
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
-let somaNotas = 0;
+let somaNum = 0;
 
 let media = 0;
 
-for(let n of notas) {
-    somaNotas += n;
+for(let num of numbers) {
+    somaNum += num;
 }
 
-media = somaNotas / notas.length;
+media = somaNum / numbers.length;
 
 console.log(`A média dos valores do vetor é ${media}`);
