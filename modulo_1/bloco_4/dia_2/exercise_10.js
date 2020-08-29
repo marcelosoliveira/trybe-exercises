@@ -1,14 +1,14 @@
-let array = [45, 27, 57, 1330, 560, 800, 200, 70, 945, 54];
+let numbers = [45, 27, 57, 1330, 560, 800, 200, 70, 945, 54];
 
-for (i = 1; i < array.length; i += 1) {
+for (i = 1; i < numbers.length; i += 1) {
     for (j = 0; j < i; j += 1) {
-        if (array[i] < array[j]) {
-            let pos = array[i];
+        if (numbers[i] < numbers[j]) {
+            let pos = numbers[i];
 
-            array[i] = array[j];
-            array[j] = pos;
+            numbers[i] = numbers[j];
+            numbers[j] = pos;
         }
     }
 }
 
-console.log(`Array Ordenado em ordem crescente \n ${array}`);
+console.log(`Array Ordenado em ordem crescente \n ${numbers}`);
