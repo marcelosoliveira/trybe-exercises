@@ -9,7 +9,6 @@ for (i = array.length -1; i >= 0; i -= 1) {
             array[j] = pos;
         }
     }
-    console.log(`Array Ordenado em ordem crescente \n ${array}`);
 }
 
-//console.log(`Array Ordenado em ordem crescente \n ${array}`);
+console.log(`Array Ordenado em ordem decrescente \n ${array}`);
