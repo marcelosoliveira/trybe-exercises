@@ -1,5 +1,5 @@
 let num1 = 9;
-let num2 = 7;
+let num2 = 8;
 let num3 = 17;
 
 let numPar = 0;
@@ -19,3 +19,5 @@ if (numPar > 0) {
 }else {
     console.log("Tem número par? ", false);
 }
+
+console.log(`Total de números pares é ${numPar}`);
