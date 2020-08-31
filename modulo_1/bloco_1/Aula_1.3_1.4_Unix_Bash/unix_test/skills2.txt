@@ -1,9 +1,0 @@
-Internet
-Unix
-Bash
-
-Marcelo
-Desenvolvedor
-Software
-Fullstack
-Web
