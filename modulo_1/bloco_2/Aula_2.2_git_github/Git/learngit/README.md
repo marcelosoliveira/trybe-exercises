@@ -1,2 +1,0 @@
-# learngit
-Introdução ao git
