@@ -4,8 +4,8 @@
 
 # Composto por 5 Blocos
 
-#Esses são os blocos disponíveis.
+# Do bloco 1 até o bloco 5
 
-#Exercícios do bloco 4
+# Cada bloco contém os dias  de conteúdo
 
-#Pasta composta por dias de conteudo
+# Cada dia contém uma quantidade de exercícios
