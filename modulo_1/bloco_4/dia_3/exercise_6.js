@@ -1,4 +1,4 @@
-let num = 13;
+let num = 37;
 let primo = 0;
 
 for (let i = 3; i < num; i += 1) {
