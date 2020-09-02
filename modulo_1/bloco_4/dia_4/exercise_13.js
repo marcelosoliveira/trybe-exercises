@@ -28,8 +28,7 @@ function retornaNumero(romano) {
                         result = num;
                         num = result;
                     } 
-                }
-                               
+                }                               
             }
         }
     }
