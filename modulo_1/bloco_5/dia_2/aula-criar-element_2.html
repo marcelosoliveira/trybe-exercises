@@ -16,7 +16,9 @@
     let filho = document.createElement('div');
     pai.appendChild(filho);
     document.querySelector('#elementoOndeVoceEsta').appendChild(document.createElement('div'));
+    document.querySelector('#elementoOndeVoceEsta div').id = 'filhoElementoOndeVoceEsta'
     document.querySelector('#primeiroFilho').appendChild(document.createElement('section'));
+    document.querySelector('#primeiroFilho section').id = 'filho';
     document.querySelector('#primeiroFilho section').parentElement.
     parentElement.lastElementChild.previousElementSibling.previousElementSibling;
   </script>
