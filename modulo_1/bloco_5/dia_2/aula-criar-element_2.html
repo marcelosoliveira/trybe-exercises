@@ -14,9 +14,10 @@
   <script>
     let pai = document.querySelector('#pai');
     let filho = document.createElement('div');
-    pai.appendChild(filho);
+    filho.id = 'irmaoElementoOndeVoceEsta';
+    pai.appendChild(filho)
     document.querySelector('#elementoOndeVoceEsta').appendChild(document.createElement('div'));
-    document.querySelector('#elementoOndeVoceEsta div').id = 'filhoElementoOndeVoceEsta'
+    document.querySelector('#elementoOndeVoceEsta').lastElementChild.id = 'filhoElementoOndeVoceEsta';
     document.querySelector('#primeiroFilho').appendChild(document.createElement('section'));
     document.querySelector('#primeiroFilho section').id = 'filho';
     document.querySelector('#primeiroFilho section').parentElement.
