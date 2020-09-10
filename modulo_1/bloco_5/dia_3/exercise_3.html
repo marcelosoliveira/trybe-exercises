@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercício - Parte 2</title>
+    <script>     
+      function mensagem() {
+      alert("Você clicou no botão");
+      }
+    </script>
   </head>
   <body>
     <div>
@@ -32,9 +37,15 @@
         <strong>discount</strong> o resultado da multiplicação.
       </p>
       <script language="javascript" type="text/javascript">
-        //JavaScript para a tarefa 2
-        //JavaScript para a tarefa 2
-        //JavaScript para a tarefa 2
+      window.onload = desconto;
+      function desconto() {
+        let productPrice = 59.99;
+        let discount = 0.30;
+        document.querySelectorAll('button')[1].addEventListener('click', function() {
+          let resultado = productPrice * discount;
+          alert("Desconto de R$("+resultado.toFixed(2)+")");
+        })
+      }        
       </script>
       <hr />
       <h2>Bônus</h2>
@@ -53,12 +64,41 @@
       </p>
       <!-- Adicione a tag <img /> aqui -->
     </div>
+    
     <script>
+      //Tarefa 1
       document.querySelector('.tarefa1').appendChild(document.createElement('button'));
       document.querySelector('.tarefa1 button').innerText = "Botão alerta";
-      document.querySelector('.tarefa1 button').setAttribute('onclick', 'mensagem()');
-      function mensagem() {
-        alert("Você clicou no botão");
+      document.head.nextElementSibling.querySelector('.tarefa1 button').
+      setAttribute('onclick', 'mensagem()');
+
+      //Tarefa 2
+      document.querySelectorAll('hr')[2].appendChild(document.createElement('button'));
+      document.querySelectorAll('button')[1].innerText = "Calcular desconto";
+
+      //Tarefa bonus
+      document.querySelector('div').appendChild(document.createElement('img'));
+      document.querySelector('div').appendChild(document.createElement('img'));
+      document.querySelectorAll('img')[0].setAttribute('src', './image1.png');
+      document.querySelectorAll('img')[1].setAttribute('src', './image2.png');
+      document.querySelectorAll('img')[0].setAttribute('width', '200px');
+      document.querySelectorAll('img')[1].setAttribute('width', '200px');
+      
+      document.querySelectorAll('img')[0].setAttribute('id', 'imagem');
+      document.querySelectorAll('img')[0].addEventListener('mouseover', mouseEmCima);
+      document.querySelectorAll('img')[0].addEventListener('mouseleave', mouseSaiu);
+
+      function mouseEmCima(eventoDeOrigem) {
+          document.querySelector('#imagem').src = './image2.png';
+          console.log("mouse entrou na imagem!");
+          //console.log(eventoDeOrigem.target);
+          console.log(eventoDeOrigem.type);       
+      }
+      function mouseSaiu(eventoDeOrigem) {
+        document.querySelector('#imagem').src = './image1.png';
+          console.log("mouse saiu da imagem!");
+          //console.log(eventoDeOrigem.target);
+          console.log(eventoDeOrigem.type);       
       }
     </script>
   </body>
