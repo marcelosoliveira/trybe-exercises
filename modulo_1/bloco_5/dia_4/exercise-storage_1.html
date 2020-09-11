@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício-Storage</title>
+    <style>
+        #sessao {
+            width: 700px;
+            text-align: justify;
+            display: inline-block;
+            position: relative;
+            left: 300px;
+        }
+    </style>
 </head>
 <body>
     <section id="sessao">
@@ -46,11 +55,79 @@ comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The 
 Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics,
  very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit 
  amet..", comes from a line in section 1.10.32.
+ <br />
         </div>
     </section>
     
     <script>
-        let text = document.querySelector('text');
+        let text = document.querySelector('#text');
+        text.appendChild(document.createElement('button'));
+        let botaoCorFundo = document.querySelectorAll('#text button')[0];
+        botaoCorFundo.innerText = "Cor de fundo";
+        botaoCorFundo.addEventListener('click', function() {
+            JSON.stringify(document.body.style.backgroundColor = 'green');           
+            localStorage.setItem('document.body.style.backgroundColor', 'green');
+        })
+
+        text.appendChild(document.createElement('button'));
+        let botaoCorTexto = document.querySelectorAll('#text button')[1];
+        botaoCorTexto.innerText = "Cor do texto";
+        botaoCorTexto.addEventListener('click', function() {
+            JSON.stringify(document.body.style.color = 'white');
+            localStorage.setItem('document.body.style.color', 'white');
+        })
+
+        text.appendChild(document.createElement('button'));
+        let botaoFonte = document.querySelectorAll('#text button')[2];
+        botaoFonte.innerText = "Tamanho fonte";
+        botaoFonte.addEventListener('click', function() {
+            JSON.stringify(document.body.style.fontSize = '21px');
+            localStorage.setItem('document.body.style.fontSize', '21px');
+        })
+
+        text.appendChild(document.createElement('button'));
+        let botaoEspacoLinhas = document.querySelectorAll('#text button')[3];
+        botaoEspacoLinhas.innerText = "Espaço linhas";
+        botaoEspacoLinhas.addEventListener('click', function() {
+            JSON.stringify(document.body.style.lineHeight = '30px');
+            localStorage.setItem('document.body.style.lineHeight', '30px');
+        })
+
+        text.appendChild(document.createElement('button'));
+        let botaoTipoFonte = document.querySelectorAll('#text button')[4];
+        botaoTipoFonte.innerText = "Tipo da fonte";
+        botaoTipoFonte.addEventListener('click', function() {
+            JSON.stringify(document.body.style.fontFamily = 'Sans');
+            localStorage.setItem('document.body.style.fontFamily', 'Sans');
+        })
+
+        text.appendChild(document.createElement('button'));
+        let botaoPadrao = document.querySelectorAll('#text button')[5];
+        botaoPadrao.innerText = "Configurção padrão";
+        botaoPadrao.addEventListener('click', function() {
+            localStorage.clear();
+            location.reload();
+        })
+
+        for (let estilo = 0; estilo < document.querySelectorAll('#text button').length; estilo++) {
+            document.querySelectorAll('#text button')[estilo].style.marginTop = "10px";
+            document.querySelectorAll('#text button')[estilo].style.marginRight = "10px";
+        }
+        window.onload = stora;
+        function stora() {
+            document.body.style.backgroundColor = localStorage.
+            getItem('document.body.style.backgroundColor');
+
+            document.body.style.color = localStorage.getItem('document.body.style.color');
+
+            document.body.style.fontSize = localStorage.getItem('document.body.style.fontSize');
+
+            document.body.style.lineHeight = localStorage.getItem('document.body.style.lineHeight');
+
+            document.body.style.fontFamily = localStorage.getItem('document.body.style.fontFamily');  
+        }
+
+
     </script>
 </body>
 </html>
