@@ -2,7 +2,7 @@
 
 # Fundamentos do Desenvolvimento Web
 
-# Composto por 5 Blocos
+# Composto por 10 Blocos
 
 # Do bloco 1 até o bloco 10
 
