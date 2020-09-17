@@ -1,13 +1,14 @@
 # Modulo 01 do Curso da Trybe
 
-# Introdução - Desenvolvimento Web
+# Fundamentos do Desenvolvimento Web
 
 # Composto por 5 Blocos
 
-# Esses são os blocos disponíveis.
+# Do bloco 1 até o bloco 10
 
-# Exercícios do bloco 4
+# Cada bloco contém os dias  de conteúdo
 
-# Pasta composta por dias de conteudo
+# Cada bloco contém uma quantidade de projetos
 
-# Exercícios de JavaScript
+# Cada dia contém uma quantidade de exercícios
+
