@@ -10,7 +10,8 @@
     <header class="header">
         <h1>Currículo</h1>
     </header>
-    <form action="" method="get">
+    <form action="" name="cadastro" method="get" enctype="multipart/form-data" 
+    onsubmit="return false">
         <fieldset class="dados-pessoais">
             <legend>Dados Pessoais</legend>
 
@@ -38,9 +39,9 @@
             <select name="estado" id="estado" required="required">    
             </select><br>
 
-            <input type="radio" name="morada" id="casa">
+            <input type="radio" name="morada" value="Casa" id="casa">
             <label for="casa">Casa</label>
-            <input type="radio" name="morada" id="apart">
+            <input type="radio" name="morada" value="Apartamento" id="apart">
             <label for="apart">Apartamento</label><br>
             
         </fieldset>
@@ -60,12 +61,17 @@
             required="required"><br>
 
             <label for="data">Data de início</label>
-            <input type="text" name="data" id="data" required="required"><br>
+            <input type="text" name="data" id="data" required="required" 
+            maxlength="8" onkeypress="return onlynumber();">
+            <br>
 
         </fieldset>
-
-        <button type="submit">Enviar</button>
+        <button type="submit" id="botao-enviar" onclick="formsRequest() ">Enviar</button>
+        <button type="reset" botao-limpar">Limpar</button>          
     </form>
+   
+    <div id="request-id" class="request-class"></div>
+    
     
     <script src="./script.js"></script>
 </body>
