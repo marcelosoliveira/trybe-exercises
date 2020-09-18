@@ -17,11 +17,9 @@ for (let index = 0; index < estado.length; index += 1) {
 let dataInput = document.querySelector('#data')
 dataInput.addEventListener('blur', (event) => {
     let data = event.target.value
-    console.log(data);
     let dataFormat = [];    
         for (let index = 0; index < data.length; index += 1) {
             dataFormat.push(data[index]);
-            console.log(index);
             if (index === 1) {
                 dataFormat.push('/');
         }
