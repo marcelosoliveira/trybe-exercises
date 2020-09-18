@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title></title>
+ </head>
+ <body>
+ 
+ <h1>Mad Libs</h1>
+ 
+ <ul>
+  <li>Noun: <input type="text" id="noun">
+  <li>Adjective: <input type="text" id="adjective">
+  <li>Someone's Name: <input type="text" id="person">
+ </ul>
+ 
+ <button id="lib-button">Lib it!</button>
+  
+ <div id="story"></div>
+  
+ <script>
+     //Comece com esta página da web, que tem vários elementos de entrada e um botão
+     //Adicione uma tag de script ao final da página para seu código. 
+     //Adicione um ouvinte de evento ao botão para que ele chame uma função makeMadLib 
+     //quando clicado. Na função makeMadLib, recupere os valores atuais dos elementos de 
+     //entrada do formulário, crie uma história a partir deles e gere isso na div 
+     //da história (como "Pamela realmente gosta de pepinos rosa.")
+     let botao = document.querySelector('#lib-button');
+     botao.addEventListener('click', makeMadLib);
+     let historia = document.querySelector('#story');
+
+     function makeMadLib() {
+        let subs = document.querySelector('#noun').value;
+        let adj = document.querySelector('#adjective').value;
+        let nome = document.querySelector('#person').value;
+        historia.style.marginTop = '10px';
+        historia.innerText = `${nome} realmente gosta de ${subs} ${adj}`;             
+     }
+
+ </script>
+ </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculator</title>
+</head>
+<body>
+
+  <label>Square this number:
+    <input type="number" id="square-input" size="2">
+  </label>
+  <button id="square-button">Calculate</button>
+  <br><br>
+  
+  <label>Half this number:
+    <input type="number" id="half-input" size="2">
+  </label>
+  <button id="half-button">Calculate</button>
+  <br><br>
+  
+  <label>
+    Fraction:
+    <input type="number" id="percent1-input" size="2">
+  </label>
+  <label>
+    Whole:
+    <input type="number" id="percent2-input" size="2">
+  </label>
+  <button id="percent-button">Calculate</button>
+  <br><br>
+  
+  <label>Calculate area of circle with radius:
+    <input type="number" id="area-input" size="2">
+  </label>
+  <button id="area-button">Calculate</button> 
+  <br><br>
+  <div id="solution"></div>
+
+  <script>
+      //Comece com esta página da web, que tem entradas e botões para calcular:
+      //Adicione uma tag de script e adicione as funções do exercício da 
+      //calculadora (veja a solução se ainda não tiver feito isso). 
+      //Para cada operação, crie um ouvinte de evento para o botão e, 
+      //quando ele for clicado, encontre o valor da entrada apropriada e mostre o 
+      //resultado do cálculo na solução div. Bônus: responde aos pressionamentos 
+      //de tecla para que o usuário não precise clicar no botão.
+      let solucao = document.querySelector('#solution');
+      document.querySelector('#square-button').addEventListener('click', function() {
+        let num = document.querySelector('#square-input').value;
+        solucao.innerHTML = squareNumber(num)});
+
+      document.querySelector('#half-button').addEventListener('click', function() {
+        let num = document.querySelector('#half-input').value;
+        solucao.innerHTML = halfNumber(num)});
+
+      document.querySelector('#percent-button').addEventListener('click', function() {
+        let num1 = document.querySelector('#percent1-input').value;
+        let num2 = document.querySelector('#percent2-input').value;
+        solucao.innerHTML = percentOf(num1, num2)});
+
+      document.querySelector('#area-button').addEventListener('click', function() {
+        let num = document.querySelector('#area-input').value;
+        solucao.innerHTML = areaOfCircle(num)});
+
+      function squareNumber(num) {
+          let quad = num * num;
+          solucao.style.marginTop = '10px';
+          console.log(`O resultado da quadratura do número ${num} é ${quad}`);
+          return quad;
+      }
+
+      function halfNumber(num) {
+          let div = num / 2;
+          solucao.style.marginTop = '10px';
+          console.log(`O resultado da metade do número ${num} é ${div}`);
+          return div;
+      }
+
+      function percentOf(num1, num2) {
+          let porcent = ((num1 / num2) * 100).toFixed(2)+"%";
+          solucao.style.marginTop = '10px';
+          console.log(`Porcentagem: ${num1} é ${porcent} de ${num2}`);
+          return porcent;
+      }
+
+      function areaOfCircle(num) {
+          const PI = 3.14;
+          let areaCirc = PI * (num * num); 
+          solucao.style.marginTop = '10px';
+          console.log(`A área de um círculo com raio ${num} é ${areaCirc.toFixed(2)}`);
+          return areaCirc;
+      }
+       function total(num) {
+           let half = halfNumber(num);
+           let square = squareNumber(half);
+           let area = areaOfCircle(square);
+           let porcent = percentOf(square, area);
+           return solucao.innerHTML = `Escreva uma função que terá um argumento (um número) e 
+           execute as seguintes operações, usando as funções que você escreveu anteriormente1: 
+           Pegue metade do número e armazene o resultado. Eleve o resultado do # 1 ao quadrado 
+           e armazene esse resultado. Calcule a área de um círculo com o resultado de # 2 como o 
+           raio. Calcule a porcentagem dessa área do resultado ao quadrado (# 3).
+           Resultado: <strong>${porcent}</strong>`;
+       }
+       total(5);
+  </script>
+</body>
+</html>
