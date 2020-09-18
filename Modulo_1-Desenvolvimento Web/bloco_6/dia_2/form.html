@@ -10,10 +10,10 @@
 </head>
 <body>
     
-    <header class="header">
+    <header class="text-monospace">
         <h1>Currículo</h1>
     </header>
-    
+
     <div class="container"></div>
     <form action="" name="cadastro" method="get" enctype="multipart/form-data" 
     onsubmit="return false">
@@ -94,13 +94,13 @@
 
             </div>
         </fieldset>
-        <button class="" type="submit" id="botao-enviar" onclick="formsRequest() ">Enviar</button>
-        <button type="reset" botao-limpar">Limpar</button>          
+        <button class="bg-success text-light" type="submit" id="botao-enviar" onclick="formsRequest() ">Enviar</button>
+        <button class="bg-danger text-light" type="reset" onclick="location.reload()">Limpar</button>          
     </form>
 </div>
     <div id="request-id" class="request-class"></div>
     
     
-    <script src="./script.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>
