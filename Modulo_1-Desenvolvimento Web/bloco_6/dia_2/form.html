@@ -17,7 +17,7 @@
 
     <div class="container"></div>
     <form action="" name="cadastro" method="get" enctype="multipart/form-data" 
-    onsubmit="return false">
+    onsubmit="return false" class="was-validated needs-validation" novalidate>
         <fieldset class="dados-pessoais">
             <legend>Dados Pessoais</legend>
             
@@ -53,7 +53,7 @@
     
                <div class="form-group">
                    <label for="estado">Estado</label>
-                   <select class="form-control" name="estado" id="estado" required="required">    
+                   <select class="form-control col-md-3 mb-3" name="estado" id="estado" required="required">    
                    </select>
                </div>
     
@@ -61,7 +61,7 @@
                     <input class="form-check-input" type="radio" name="morada" value="Casa" id="casa">
                     <label class="form-check-label" for="casa">Casa</label>
                 </div>
-                <div class="form-check-inline">    
+                <div class="form-check-inline custom-radio">    
                     <input class="form-check-input" type="radio" name="morada" value="Apartamento" id="apart">
                     <label class="form-check-label" for="apart">Apartamento</label>
                 </div>
@@ -92,16 +92,23 @@
             <div class="form-group">
                 <label for="data">Data de início</label>
                 <input class="form-control" type="text" name="data" id="data" required="required" 
-                maxlength="8" onkeypress="return onlynumber();">
+                maxlength="8" >
             </div>
         </fieldset>
-        <button class="bg-success text-light" type="submit" id="botao-enviar" onclick="formsRequest() ">Enviar</button>
+        <button class="bg-success text-light" type="submit" id="botao-enviar" >Enviar</button>
         <button class="bg-danger text-light" type="reset" onclick="location.reload()">Limpar</button>          
     </form>
 </div>
     <div id="request-id" class="request-class"></div>
     
     
+    <script type="text/javascript" src="https://github.com/AlexKrupko/DatePickerX/blob/master/dist/js/DatePickerX.min.js">
+    </script>
+    <script>
+         document.getElementById('data').DatePickerX;
+        //console.log(DatePickerX.init());
+    </script>
     <script type="text/javascript" src="./script.js"></script>
 </body>
+
 </html>
