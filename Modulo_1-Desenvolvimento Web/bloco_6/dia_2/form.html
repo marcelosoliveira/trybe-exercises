@@ -53,15 +53,17 @@
     
                <div class="form-group">
                    <label for="estado">Estado</label>
-                   <select name="estado" id="estado" required="required">    
+                   <select class="form-control" name="estado" id="estado" required="required">    
                    </select>
                </div>
     
-                <div class="form-group">
-                    <input class="" type="radio" name="morada" value="Casa" id="casa">
-                    <label for="casa">Casa</label>
-                    <input class="" type="radio" name="morada" value="Apartamento" id="apart">
-                    <label for="apart">Apartamento</label>
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="morada" value="Casa" id="casa">
+                    <label class="form-check-label" for="casa">Casa</label>
+                </div>
+                <div class="form-check-inline">    
+                    <input class="form-check-input" type="radio" name="morada" value="Apartamento" id="apart">
+                    <label class="form-check-label" for="apart">Apartamento</label>
                 </div>
             
             
@@ -72,7 +74,7 @@
 
             <div class="form-group">
                 <label for="area">Resumo do currículo</label>
-                <textarea name="area" id="area" cols="30" rows="3" required="required"
+                <textarea class="form-control" name="area" id="area" cols="30" rows="3" required="required"
                 maxlength="1000"></textarea>
             </div>
 
