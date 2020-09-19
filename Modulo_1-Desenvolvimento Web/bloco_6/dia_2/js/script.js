@@ -14,7 +14,7 @@ for (let index = 0; index < estado.length; index += 1) {
     select.append(option);
 }
 
-let dataInput = document.querySelector('#data')
+/*let dataInput = document.querySelector('#data')
 dataInput.addEventListener('blur', (event) => {
     let data = event.target.value
     let dataFormat = [];    
@@ -45,7 +45,7 @@ function onlynumber(evt) {
       theEvent.returnValue = false;
       if(theEvent.preventDefault) theEvent.preventDefault();
    }
-}
+}*/
  
 let botaoEnviar = document.querySelector('#botao-enviar');
 let retornar = document.querySelector('#request-id');

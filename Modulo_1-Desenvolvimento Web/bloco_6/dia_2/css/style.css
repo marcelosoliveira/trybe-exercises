@@ -3,3 +3,11 @@ body {
     margin: auto;
     background-color: lightgray;
 }
+
+.request-class {
+    padding-top: 20px;
+    margin: auto;
+    font-size: 20px;
+    color: rgb(66, 63, 49);
+    line-height: 2.3rem;
+}
