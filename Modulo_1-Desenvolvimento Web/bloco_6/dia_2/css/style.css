@@ -11,3 +11,9 @@ body {
     color: rgb(66, 63, 49);
     line-height: 2.3rem;
 }
+
+.head {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 4rem;
+}
