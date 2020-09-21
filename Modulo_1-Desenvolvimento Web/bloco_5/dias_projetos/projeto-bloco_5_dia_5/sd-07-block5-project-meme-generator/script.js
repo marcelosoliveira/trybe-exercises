@@ -35,8 +35,8 @@ botaoEarth.addEventListener('click', function () {
 });
 
 const image = document.querySelectorAll('#sessao img');
-for (const index of image) {
-  index.addEventListener('click', (event) => {
+for (let index = 0; index < image.length; index += 1) {
+  image[index].addEventListener('click', (event) => {
     const imagens = event.path[0];
     imageMeme.src = imagens.src;
   });

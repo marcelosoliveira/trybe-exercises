@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms-Currículo</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="./css/date-picker.css">
+    <script type="text/javascript" src="./js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+</head>
+<body>
+    
+    <header class="text-monospace">
+        <h1 class="head">Currículo</h1>
+    </header>
+
+    <div class="container"></div>
+    <form action="" name="cadastro" method="get" enctype="multipart/form-data" 
+    onsubmit="return false" class="was-validated needs-validation" novalidate>
+        <fieldset class="dados-pessoais">
+            <legend>Dados Pessoais</legend>
+            
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input class="form-control input-group" type="text" name="nome" id="nome" maxlength="40" 
+                    required="required">
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input class="form-control input-group" type="text" name="email" id="email" maxlength="50" 
+                    required="required">
+                </div>
+    
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input class="form-control input-group" type="text" name="cpf" id="cpf" maxlength="11" 
+                    required="required">
+                </div>
+                
+                <div class="form-group">
+                    <label for="endereco">Endereço</label>
+                    <input class="form-control input-group" type="text" name="endereco" id="endereco" maxlength="200" 
+                    required="required">
+                </div>
+    
+                <div class="form-group">
+                    <label for="cidade">Cidade</label>
+                    <input class="form-control input-group" type="text" name="cidade" id="cidade" maxlength="28" 
+                    required="required">
+                </div>
+    
+               <div class="form-group">
+                   <label for="estado">Estado</label>
+                   <select class="form-control custom-select" name="estado" id="estado" 
+                   required="required" >
+                   <option selected disabled value="">Selecione o estado</option>    
+                   </select>
+               </div>
+    
+                <div class="form-check form-check-inline">
+                    <input class="form-check" type="radio" name="morada" value="Casa" id="casa">
+                    <label class="form-check-label" for="casa">Casa</label>
+                </div>
+                <div class="form-check form-check-inline">    
+                    <input class="form-check" type="radio" name="morada" value="Apartamento" id="apart">
+                    <label class="form-check-label" for="apart">Apartamento</label>
+                </div>
+            
+            
+        </fieldset>
+
+        <fieldset class="dados-profissionais">
+            <legend>Dados Profissionais</legend>
+
+            <div class="form-group">
+                <label for="area">Resumo do currículo</label>
+                <textarea class="form-control  input-group" name="area" id="area" cols="30" rows="3" required="required"
+                maxlength="1000"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="cargo">Cargo</label>
+                <input class="form-control  input-group" type="text" name="cargo" id="cargo" maxlength="40" required="required">
+            </div>
+
+            <div class="form-group">
+                <label for="desc-cargo">Descrição do Cargo</label>
+                <input class="form-control  input-group" type="text" name="desc-cargo" id="desc-cargo" maxlength="500" 
+                required="required">
+            </div>
+
+            <div class="form-group">
+                <label for="data">Data de início</label>
+                <input class="form-control  input-group" type="text" name="data" id="data" required="required" 
+                maxlength="8" >
+            </div>
+        </fieldset>
+        <button class="bg-success text-light" type="submit" id="botao-enviar" onclick="formsRequest()">Enviar</button>
+        <button class="bg-danger text-light" type="reset" onclick="location.reload()">Limpar</button>          
+    </form>
+</div>
+    <div id="request-id" class="request-class"></div>
+    
+    <script type="text/javascript" src="./js/script.js"></script>
+    <script type="text/javascript" src="./js/date-picker.js">
+    </script>
+    <script>
+         document.getElementById('data').DatePickerX.init();
+    </script>    
+</body>
+
+</html>
