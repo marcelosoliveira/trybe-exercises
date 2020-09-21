@@ -13,7 +13,9 @@ for (let index = 0; index < estado.length; index += 1) {
     option.innerText = estado[index];
     select.append(option);
 }
-
+/* Função para ajudar na formatação da data com o evento keyup ou keypress
+function percentOf() { setTimeout(function() { let number1 = setFractionNumber.value; let number2 = setWholeNumber.value; let percentOfNumber = (number1 / number2) * 100; console.log(number1 + " is " + percentOfNumber + "% of " + number2 + "."); }, 1000); } 
+*/
 let dataInput = document.querySelector('#data')
 dataInput.addEventListener('blur', (event) => {
     let data = event.target.value
