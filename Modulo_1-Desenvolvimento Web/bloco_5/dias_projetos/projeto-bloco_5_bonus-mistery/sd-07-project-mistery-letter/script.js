@@ -1,39 +1,47 @@
 const criarCarta = document.querySelector('#criar-carta');
 const cartaTexto = document.querySelector('#carta-texto');
 const cartaGerada = document.querySelector('#carta-gerada');
+const contador = document.querySelector('#carta-contador');
 
-const est = ['newspaper', 'magazine', 'magazine2'];
+const est = ['newspaper', 'magazine1', 'magazine2'];
 const tam = ['medium', 'big', 'reallybig'];
 const rot = ['rotateleft', 'rotateright'];
 const inc = ['skewleft', 'skewright'];
 
-function validaTexto(texto) {
-    if (texto.value === '' || !texto.value.trim()) {
-        alert('Por favor, digite o conteúdo da carta.');
-    }
+function geraClasses() {
+  const estilos = est[Math.round(Math.random() * (est.length - 1))];
+  const tamanhos = tam[Math.round(Math.random() * (tam.length - 1))];
+  const rotacao = rot[Math.round(Math.random() * (rot.length - 1))];
+  const inclina = inc[Math.round(Math.random() * (inc.length - 1))];
+  const classes = [estilos, tamanhos, rotacao, inclina];
+  const classesRandom = classes[Math.round(Math.random() * (classes.length - 1))];
+  return classesRandom;
 }
-
-function geraClasses() {      
-   const estilos = est[Math.round(Math.random() * (est.length - 1))];
-   const tamanhos = tam[Math.round(Math.random() * (tam.length - 1))];
-   const rotacao = rot[Math.round(Math.random() * (rot.length - 1))];
-   const inclina = inc[Math.round(Math.random() * (inc.length - 1))];
-   let classes = [estilos, tamanhos, rotacao, inclina];
-   return classes;
-}
-console.log(geraClasses());
 
 criarCarta.addEventListener('click', () => {
-    validaTexto(cartaTexto);
-    let textoCarta = cartaTexto.value.split(' ');
+  if (cartaTexto.value === '' || !cartaTexto.value.trim()) {
+    cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.';
+  } else {
+    let count = 0;
+    cartaGerada.innerText = '';
+    const textoCarta = cartaTexto.value.trim().split(' ');
     for (let index = 0; index < textoCarta.length; index += 1) {
-        let spans = document.createElement('span');
-        spans.style.display = 'inline-block';
-        spans.classList.add(geraClasses()[1]);
-        spans.classList.add(geraClasses()[3]);
-        spans.classList.add(geraClasses()[2]);
-        spans.classList.add(geraClasses()[0]);
+      const spans = document.createElement('span');
+      spans.style.display = 'inline-block';
+      spans.classList.add(geraClasses());
+      spans.classList.add(geraClasses());
+      spans.classList.add(geraClasses());
+      spans.classList.add(geraClasses());
+      if (textoCarta[index].trim()) {
         spans.innerText = textoCarta[index];
-        cartaGerada.appendChild(spans);        
+        cartaGerada.appendChild(spans);
+        count += 1;
+        contador.innerText = `${count}`;
+      }
     }
+  }
+});
+
+cartaGerada.addEventListener('click', (event) => {
+  event.target.className = geraClasses();
 });
