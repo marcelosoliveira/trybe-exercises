@@ -1,0 +1,115 @@
+body {    
+    margin: 0px 0px;
+    background-color: rgb(253, 251, 251);
+    
+}
+
+#cabecalho {      
+    position: fixed;
+    background-color: cornflowerblue;
+    width: 100%; 
+    z-index: 1;
+    top: 0px;
+    height: 175px;        
+}
+
+#cabecalho h2 {
+    color: aliceblue;
+    top: 0px;
+    padding-top: 0px;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    height: 10px;
+}
+
+#cabecalho a {
+    text-decoration: none;
+    font-size: 20px;
+    color: cornsilk;
+    top: 0px;
+}
+
+#cabecalho li{    
+    display: inline;
+    margin-right: 10px;
+}
+
+
+#titulo {
+    text-align: center;
+    padding-top: 10px;
+    color: aliceblue;
+    height: 20px;      
+}
+
+#minha_foto {
+    width: 150px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 30px;
+}
+
+table, th, td{
+    border: 1px solid black; 
+}
+
+th {
+    padding: 10px;
+}
+
+.table {
+display: flex;
+justify-content: center;
+   
+}
+
+.lado-esquerdo {
+    margin-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 2px;
+    line-height: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lado-esquerdo p {
+    width: 45%;
+}
+
+.lado-direito {    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 2px;
+    line-height: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}    
+
+.lado-direito aside, p {
+    width: 45%;
+}
+
+.link {
+display: flex; 
+justify-content: center; 
+}
+
+.link a {
+    background-color: brown;
+    border: 2px solid rgb(1, 10, 4);
+    text-decoration: none;
+    color: aliceblue;
+    padding: 8px 8px;
+    margin-bottom: 10px;  
+}
+    
+
+#rodape {
+    text-align: center;
+    color: brown;
+    margin-bottom: 10px;   
+}
