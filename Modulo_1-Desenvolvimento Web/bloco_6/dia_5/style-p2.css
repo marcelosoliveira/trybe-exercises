@@ -1,0 +1,11 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+.centro {
+  width: 90%;
+  height: 100%;
+  background-color: #333;
+  margin: 0 auto;
+}
