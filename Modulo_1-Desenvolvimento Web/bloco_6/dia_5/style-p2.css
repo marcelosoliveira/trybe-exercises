@@ -32,22 +32,8 @@
   text-align: center;
 }
 
-@media screen and (min-width: 320px) and (max-width: 568px) {
-  .centro {
-    width: 100%;
-  }
-  .topo {
-    background-color: yellow;
-  }
-  .topo h1 {
-    color: red;
-  }
-  .colunas {
-    display: block;
-  }
-  .colunas2 {
-    width: 100%;
-    background-color: red;
-    margin-top: 5px;
+@media screen and (max-width: 550px) and (orientation: landscape) {
+  body {
+    color: gray;
   }
 }
