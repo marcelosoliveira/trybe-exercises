@@ -1,0 +1,21 @@
+.centro {
+  width: 100%;
+}
+
+.topo {
+  background-color: yellow;
+}
+
+.topo h1 {
+  color: red;
+}
+
+.colunas {
+  display: block;
+}
+
+.colunas2 {
+  width: 100%;
+  background-color: red;
+  margin-top: 5px;
+}
