@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-3 Part-2</title>
+</head>
+<body>
+    <section class="exec">
+        <button id="button1">Click</button>
+        <div id="count-click"></div>
+    </section>
+    <script>
+        let clickCount = 0;
+        const buttonClick = document.querySelector('#button1');
+        buttonClick.addEventListener('click', _ => {
+            clickCount += 1;
+            const clicks = document.querySelector('#count-click');
+            clicks.innerText = `Quatidade de clicks no botão ${clickCount}`;
+        });
+    </script>
+</body>
+</html>
