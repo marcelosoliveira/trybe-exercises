@@ -1,4 +1,4 @@
-let skill = ['HTML', 'CSS', 'JavaScript', 'React', 'NodeJS'];
+let skill = ['React', 'NodeJS', 'CSS', 'HTML', 'JavaScript'];
 
 const str = string1 => {
   let str1 = 'Tryber x aqui!';
@@ -16,7 +16,14 @@ const str = string1 => {
 const skills = string2 => {
   return `${string2} Minhas cinco principais habilidades são:
 
-${skill.sort().join('\n\n')}\n\n#goTrybe`;
+${skill.sort().join(';\n\n')};\n\n#goTrybe.`;
 }
+console.log(skills(str('Marcelo')));
 
-console.log(skills(str('#vqv')));
+const skillsHtml = string2 => {
+  return `<strong>${string2}</strong> Minhas cinco principais habilidades são:
+
+<br><br><li>${skill.sort().join(';</li><br><li>')};</li><br><strong>#goTrybe.</strong>`;
+}
+const page = document.querySelector('#page');
+page.innerHTML = `${skillsHtml(str('Marcelo'))}`
