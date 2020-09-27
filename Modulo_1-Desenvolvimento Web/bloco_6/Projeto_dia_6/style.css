@@ -1,9 +1,9 @@
 body {
   box-sizing: border-box;
   font-family: Helvetica, Arial, sans-serif;
-  height: 100vh;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 .top-bar {
@@ -12,7 +12,7 @@ body {
   display: flex;
   height: 82px;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
 }
 
 .form-group {
@@ -69,9 +69,9 @@ input {
   background: linear-gradient(white, #d3d8e8);
   display: flex;
   flex-direction: row;
-  height: 100vh;
+  height: 100%;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
 }
 
 .left-content {
@@ -79,6 +79,7 @@ input {
   font-size: 20px;
   font-weight: 600;
   line-height: 29px;
+  margin-left: 46px;
   margin-top: 40px;
   width: 800px;
 }
@@ -92,6 +93,7 @@ input {
 }
 
 .right-content {
+  margin-right: 120px;
   width: 300px;
 }
 
@@ -231,9 +233,95 @@ span {
   width: 100%;
 }
 
-@media ( max-width : 500px ) {
+@media screen and ( max-width : 450px ) {
 
-  body {
+  .top-bar {
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    padding-right: 15px;
+    width: 100%;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+    width: 100%;
+  }
+
+  .facebook-login {
+    flex-direction: column;
+    justify-content: flex-end;
     margin: 0;
+    padding: 0;
+  }
+
+  .left-content {
+    height: 0;
+    width: 0;
+  }
+
+  .left-content img {
+    display: none;
+  }
+
+  .left-content p {
+    display: none;
+  }
+
+  .right-content {
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .form-group label {
+    display: none;
+  }
+
+  .facebook-logo {
+    align-items: flex-end;
+    align-self: flex-start;
+    margin-left: 90px;
+    margin-top: 10px;
+  }
+
+  .buttonLogin {
+    margin-top: 10px;
+    padding: 5px;
+    width: 95vw;
+  }
+
+  .form-group {
+    display: flex;
+    margin-bottom: 0;
+  }
+
+  .input-email {
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 5px;
+    padding-bottom: 10px;
+    width: 93vw;
+  }
+
+  .input-password {
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    padding-top: 10px;
+    width: 93vw;
+  }
+
+  .submitButton {
+    margin-left: 3px;
+    width: 95vw;
+  }
+
+  .open {
+    margin-top: 60px;
   }
 }
