@@ -19,7 +19,8 @@ const study = (student) => {
     console.log(`${st} Nível: ${student[st]}\n`);
   }
 }
-
+console.log('Student 1');
 study(student1);
 
+console.log('Student 2');
 study(student2);
