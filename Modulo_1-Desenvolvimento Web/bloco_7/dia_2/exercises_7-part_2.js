@@ -32,7 +32,7 @@ console.log('----------------------------');
 Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da 
 chave e o valor da chave. Exemplo: */
 console.log('Exercise 8 Part 2');
-/* const verifyPair = (object, key, value) => {
+const verifyPair1 = (object, key, value) => {
   let bool1 = false;
   let bool2 = false;
   for (let keys of Object.keys(object)) {
@@ -48,12 +48,14 @@ console.log('Exercise 8 Part 2');
   }
 
   if (bool1 && bool2) {
-    return true;
+    return `Output: ${true}`;
   } else {
-    return false;
+    return `Output: ${false}`;
   }
-} */
-const verifyPair = (object, key, value) => {
+}
+console.log(verifyPair1(lesson1, 'turno', 'noite'))
+//Dois exercise 8 part 2, feitos de dois jeitos.
+const verifyPair2 = (object, key, value) => {
   const arr = Object.entries(object);
   let count = 0;
   for (let index in arr) {
@@ -67,4 +69,4 @@ const verifyPair = (object, key, value) => {
     return `Output: ${false}`;
   }
 }
-console.log(verifyPair(lesson2, 'professor', 'Carlos'))
+console.log(verifyPair2(lesson2, 'professor', 'Carlos'))
