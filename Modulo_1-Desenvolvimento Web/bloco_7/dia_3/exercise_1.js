@@ -18,4 +18,5 @@ assert.strictEqual(sum(0,0), 0, 'O resultado tem que ser igual a 0');
 assert.strictEqual(sum(4, "5"), 9, 'O resultado tem que ser igual a 0');
 
 //4.Teste se a mensagem de erro é "parameters must be numbers" quando realizar a chamada sum(4, "5")
-assert.throws(() => { sum(4, "5"); }, /^Error: parameters must be numbers$/);
+assert.throws(() => { sum(4, "5"); }, /^Error: parameters must be numbers$/); //ok
+
