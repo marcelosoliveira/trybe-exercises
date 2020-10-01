@@ -14,4 +14,4 @@ console.log(verify('Mas123drj'));
 assert.strictEqual(verify('Mas123drj'), 'Senha cadastrada com sucesso! Sua senha é: Mas123drj');
 assert.strictEqual(verify('Mas122j'), 'Senha inválida!');
 
-/* const pass = '/^[a-z])([A-Z])([@#$%])(\d)){9,20}$/'; */
+/*const pass = '/^[a-z])([A-Z])([@#$%])(\d)){9,20}$/';*/
