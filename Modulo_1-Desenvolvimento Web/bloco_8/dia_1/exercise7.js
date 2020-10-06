@@ -27,7 +27,7 @@ const books = [
     genre: 'Ficção Científica',
     author: {
       name: 'Isaac Asimov',
-      birthYear: 1921,
+      birthYear: 1920,
     },
     releaseYear: 1951,
   },
