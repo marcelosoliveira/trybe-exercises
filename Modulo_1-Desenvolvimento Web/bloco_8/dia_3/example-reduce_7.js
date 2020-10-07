@@ -78,6 +78,6 @@ const estudantes = [
 
 const studentMateria = estudantes.map((nomes) => Alunos = {nome: nomes.nome, 
   Materia: nomes.materias.reduce((maiorNota, materia) => 
-  maiorNota.nota > materia.nota ? maiorNota : materia).name});
+  maiorNota.nota > materia.nota ? maiorNota : materia).name}, 0);
 
 console.log(studentMateria);
