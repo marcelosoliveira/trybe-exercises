@@ -9,7 +9,7 @@
 
 function vowels(str) {
     let count = 0;
-    const vogais = ['a', 'e', 'i', 'o', 'u'];
+    const vogais = 'aeiou';
     for (index = 0; index < vogais.length; index += 1) {
         for (key = 0; key < str.length; key += 1) {
             if (vogais[index] === str[key].toLowerCase()) {
