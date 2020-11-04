@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "test": "../jest/node_modules/jest/node_modules/.bin/jest run"
+  },
+  "dependencies": {
+    "node-fetch": "2.6.1"
+  }
+}
