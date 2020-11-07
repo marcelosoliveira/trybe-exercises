@@ -1,0 +1,27 @@
+.pokedex-class {
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  height: 100px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  width: 200px;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+
+.pokedex-class img {
+  padding-left: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.pokemon-class {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 800px;
+}
