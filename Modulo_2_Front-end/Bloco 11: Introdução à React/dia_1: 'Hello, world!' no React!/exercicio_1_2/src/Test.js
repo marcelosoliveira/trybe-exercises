@@ -1,6 +1,6 @@
 import React from 'react';
 
-const task = (value) => {
+const Task = (value) => {
   return (
     <li>{value.hardskills}</li>
   );
@@ -11,7 +11,7 @@ const skills = ['JavaScript', 'PostgreeSql', 'React', 'NodeJS', 'Angular', 'Spri
 class Test extends React.Component {
   render() {
   return (
-    skills.map(skill => <ul>< task key={skill.toString()} hardskills={skill} /></ul>)
+    skills.map(skill => <ul><br />< Task key={skill.toString()} hardskills={skill} /></ul>)
   );
   }
 }
