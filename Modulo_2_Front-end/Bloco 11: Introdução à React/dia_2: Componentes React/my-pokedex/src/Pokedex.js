@@ -12,7 +12,7 @@ class Pokedex extends React.Component {
           </p>
           <p>{this.props.types}</p>
           <p>
-            {this.props.pesos} {this.props.units}
+          Average weight: {this.props.pesos.toFixed(1)} {this.props.units}
           </p>
         </div>
         <img src={this.props.images} alt="Pokemon" />
