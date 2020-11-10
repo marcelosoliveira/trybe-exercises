@@ -33,14 +33,4 @@ h1 {
   .pokedex-class {
     width: 500px;
   }
-  .pokemon-class {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: auto;
-    width: 400px;
-  }
-  .pokedex-class img {
-    margin-left: 60px;
-  }
-}
+
