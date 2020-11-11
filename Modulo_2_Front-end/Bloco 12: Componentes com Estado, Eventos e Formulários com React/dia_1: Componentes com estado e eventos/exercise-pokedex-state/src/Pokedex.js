@@ -13,7 +13,7 @@ class Pokedex extends React.Component {
     this.nextPoketmon = this.nextPoketmon.bind(this);
     this.filterTypePokemon = this.filterTypePokemon.bind(this);
     this.eventButton = this.eventButton.bind(this);
-    this.repeatButton = this.repeatButton.bind(this);
+    this.notRepeatButton = this.notRepeatButton.bind(this);
     this.buttonDisable = this.buttonDisable.bind(this);
   }
 
@@ -43,7 +43,7 @@ class Pokedex extends React.Component {
     });
   }
 
-  repeatButton() {
+  notRepeatButton() {
     return this.props.pokemons.map((pokemon) => 
     Object.values(pokemon)[2]).filter((type, index, array) => index === array.indexOf(type));
   }
@@ -64,7 +64,7 @@ class Pokedex extends React.Component {
           </div>
           <div className="button-container">           
           <Button onClick={this.eventButton} className="button-class-type" value="All" />  
-          {this.repeatButton().map((type) => {
+          {this.notRepeatButton().map((type) => {
             return <Button onClick={this.eventButton} 
             className="button-class-type" value={type} />
           })}
