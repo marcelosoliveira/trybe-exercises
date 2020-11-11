@@ -1,0 +1,36 @@
+.button-class {
+  display: inline-block;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+.button-class-next {
+  background-color: darkgreen;
+  border: none;
+  color: aliceblue;
+  padding: 20px 30px; 
+}
+
+.button-class-next:disabled {
+  background-color: darkgray;
+}
+
+.button-class-type {
+  background-color: darkorange;
+  border: none;
+  color: aliceblue;
+  padding: 20px 30px;     
+}
+
+.button-container {
+  margin: auto;
+  width: 980px;
+}
+
+@media screen and (max-width: 600px) {
+  .button-container {
+    width: 350px;
+  }
+}
