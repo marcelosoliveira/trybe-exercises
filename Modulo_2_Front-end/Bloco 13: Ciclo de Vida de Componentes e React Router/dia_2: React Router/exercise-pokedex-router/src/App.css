@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+}
+
+.link {
+  margin-left: 15px;
+}
+
+.pokedex-img {
+  height: 400px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 400px;
+}
+
+.about-pokedex-p {
+  width: 710px;
+  margin: auto;
+  margin-top: 50px;
+}

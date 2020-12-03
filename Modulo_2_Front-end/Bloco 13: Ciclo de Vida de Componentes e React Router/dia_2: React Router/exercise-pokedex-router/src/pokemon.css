@@ -1,0 +1,35 @@
+.pokemon {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 1 1 auto;
+  min-width: 25%;
+  margin: 10px 10px;
+  border: 1px gray solid;
+  border-radius: 10px;
+}
+
+.details-pokemon {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 1 1 auto;
+  max-width: 30%;
+  margin: 10px 10px;
+  margin: auto;
+  border: 1px gray solid;
+  border-radius: 10px; 
+}
+
+.location-pokedex {
+  margin-bottom: 30px;
+}
+
+.star-pokemon {
+  width: 20px;/* Faz a largura ficar igual a da largura da imagem de exemplo */
+  height: 20px;/* Faz a altura ficar igual a da altura da imagem de exemplo */
+  margin-bottom: 65px;
+  margin-right: 20px;
+  mask-image: none;
+  background-color: white;
+}
