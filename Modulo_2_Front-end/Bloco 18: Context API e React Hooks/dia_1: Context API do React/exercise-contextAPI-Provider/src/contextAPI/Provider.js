@@ -1,17 +1,14 @@
 import React from 'react';
-import Context from './contextAPI/Context'
-import TrafficSignal from './TrafficSignal';
-import './App.css';
-import Cars from './Cars';
+import Context from './Context'
 
-class App extends React.Component {
+class Provider extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       redCar: false,
       blueCar: false,
       yellowCar:false,
-      color: 'red',
+      signalColor: 'red',
     }
     this.handlerCar = this.handlerCar.bind(this);
     this.changeSignal = this.changeSignal.bind(this);
@@ -27,7 +24,7 @@ class App extends React.Component {
 
   changeSignal(sinal) {
     this.setState({
-      color: sinal,
+      signalColor: sinal,
     });
   }
 
@@ -37,15 +34,16 @@ class App extends React.Component {
       handlerCar: this.handlerCar,
       changeSignal: this.changeSignal, 
     }
+
+    const { children } = this.props;
     return (
       <div className="container">
         <Context.Provider value={ cars }>
-          <Cars />
-          <TrafficSignal />
+          { children }
         </Context.Provider>
       </div>
     );
   }
 }
 
-export default App;
+export default Provider;

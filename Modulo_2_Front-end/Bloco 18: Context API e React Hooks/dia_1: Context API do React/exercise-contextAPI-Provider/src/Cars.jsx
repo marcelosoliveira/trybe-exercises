@@ -1,13 +1,15 @@
 import React from 'react';
-import ContextCar from './contextAPI/Context'
+import Context from './contextAPI/Context'
 import carBlue from './images/carBlue.jpeg';
 import carRed from './images/carRed.jpeg';
 import carYellow from './images/carYellow.jpeg';
 
-function Cars() {
+class Cars extends React.Component {
+  render() {
+
+  const { redCar, blueCar, yellowCar, handlerCar } = this.context;
+
   return (
-    <ContextCar.Consumer>
-      {({ redCar, blueCar, yellowCar, handlerCar }) => (
     <div>
       <div>
         <img
@@ -49,9 +51,10 @@ function Cars() {
         </button>
       </div>
     </div>
-    )}
-    </ContextCar.Consumer>
   )
 }
+}
+
+Cars.contextType = Context
 
 export default Cars;
