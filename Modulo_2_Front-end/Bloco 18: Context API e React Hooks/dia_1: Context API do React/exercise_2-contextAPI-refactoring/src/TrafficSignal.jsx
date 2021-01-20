@@ -1,20 +1,10 @@
 import React from 'react';
 import Context from './contextAPI/Context'
-import redSignal from './images/redSignal.jpeg';
-import yellowSignal from './images/yellowSignal.jpeg';
-import greenSignal from './images/greenSignal.jpeg';
-
-const renderSignal = (signalColor) => {
-  if (signalColor === 'red') return redSignal;
-  if (signalColor === 'yellow') return yellowSignal;
-  if (signalColor === 'green') return greenSignal;
-  return null;
-};
 
 const TrafficSignal = () => {
   return (
     <Context.Consumer>
-      {({ color, changeSignal }) => (
+      {({ color, changeSignal, renderSignal }) => (
     <div>
       <div className="button-container">
         <button onClick={() => changeSignal('red')} type="button">

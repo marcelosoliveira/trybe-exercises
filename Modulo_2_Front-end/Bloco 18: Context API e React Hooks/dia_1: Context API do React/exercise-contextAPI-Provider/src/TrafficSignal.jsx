@@ -1,20 +1,10 @@
 import React from 'react';
 import Context from './contextAPI/Context'
-import redSignal from './images/redSignal.jpeg';
-import yellowSignal from './images/yellowSignal.jpeg';
-import greenSignal from './images/greenSignal.jpeg';
-
-const renderSignal = (signalColor) => {
-  if (signalColor === 'red') return redSignal;
-  if (signalColor === 'yellow') return yellowSignal;
-  if (signalColor === 'green') return greenSignal;
-  return null;
-};
 
 class TrafficSignal extends React.Component {
   render() {
 
-  const { signalColor, changeSignal } = this.context;
+  const { signalColor, changeSignal, renderSignal } = this.context;
 
   return (
     <div>

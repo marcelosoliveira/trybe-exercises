@@ -9,26 +9,24 @@ class App extends React.Component {
     this.state = {
       redCar: false,
       blueCar: false,
-      yellowCar:false,
+      yellowCar: false,    
     }
     this.handlerCar = this.handlerCar.bind(this);
   }
 
-  handlerCar(red, blue, yellow) {
+  handlerCar(car, side) {
     this.setState({
-      redCar: red,
-      blueCar: blue,
-      yellowCar: yellow,  
+      [car]: side,
     });
   }
 
   render() {
-    const cars = {
+    const context = {
       ...this.state,
       handlerCar: this.handlerCar, 
     }
     return (
-      <ContextCar.Provider value={cars}>
+      <ContextCar.Provider value={context}>
         <Cars />
       </ContextCar.Provider>
     );
@@ -37,3 +35,4 @@ class App extends React.Component {
 }
 
 export default App;
+

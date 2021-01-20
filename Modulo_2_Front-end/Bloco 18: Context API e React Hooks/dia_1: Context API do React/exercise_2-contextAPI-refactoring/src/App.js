@@ -1,8 +1,10 @@
 import React from 'react';
-import Context from './contextAPI/Context'
-import TrafficSignal from './TrafficSignal';
+import ContextCar from './contextAPI/Context'
 import './App.css';
 import Cars from './Cars';
+import redSignal from './images/redSignal.jpeg';
+import yellowSignal from './images/yellowSignal.jpeg';
+import greenSignal from './images/greenSignal.jpeg';
 
 class App extends React.Component {
   constructor(props) {
@@ -10,42 +12,39 @@ class App extends React.Component {
     this.state = {
       redCar: false,
       blueCar: false,
-      yellowCar:false,
-      color: 'red',
+      yellowCar: false,    
     }
     this.handlerCar = this.handlerCar.bind(this);
-    this.changeSignal = this.changeSignal.bind(this);
+    this.renderSignal = this.renderSignal.bind(this);
   }
 
-  handlerCar(red, blue, yellow) {
+  handlerCar(car, side) {
     this.setState({
-      redCar: red,
-      blueCar: blue,
-      yellowCar: yellow,  
+      [car]: side,
     });
   }
-
-  changeSignal(sinal) {
-    this.setState({
-      color: sinal,
-    });
-  }
+  
+  const renderSignal = (signalColor) => {
+  if (signalColor === 'red') return redSignal;
+  if (signalColor === 'yellow') return yellowSignal;
+  if (signalColor === 'green') return greenSignal;
+  return null;
+};
 
   render() {
-    const cars = {
+    const context = {
       ...this.state,
       handlerCar: this.handlerCar,
-      changeSignal: this.changeSignal, 
+      renderSignal: this.renderSignal,
     }
     return (
-      <div className="container">
-        <Context.Provider value={ cars }>
-          <Cars />
-          <TrafficSignal />
-        </Context.Provider>
-      </div>
+      <ContextCar.Provider value={context}>
+        <Cars />
+      </ContextCar.Provider>
     );
   }
+  
 }
 
 export default App;
+

@@ -4,7 +4,8 @@ import carBlue from './images/carBlue.jpeg';
 import carRed from './images/carRed.jpeg';
 import carYellow from './images/carYellow.jpeg';
 
-function Cars() {
+class Cars extends React.Component {
+  render() {
   return (
     <ContextCar.Consumer>
       {({ redCar, blueCar, yellowCar, handlerCar }) => (
@@ -16,7 +17,7 @@ function Cars() {
           alt="red car"
         />
         <button
-          onClick={() => handlerCar( !redCar, blueCar, yellowCar)}
+          onClick={() => handlerCar( 'redCar', !redCar)}
           type="button"
         >
           Move
@@ -29,7 +30,7 @@ function Cars() {
           alt="blue car"
         />
         <button
-          onClick={() => handlerCar(redCar, !blueCar, yellowCar)}
+          onClick={() => handlerCar('blueCar', !blueCar)}
           type="button"
         >
           Move
@@ -42,7 +43,7 @@ function Cars() {
           alt="yellow car"
         />
         <button
-          onClick={() => handlerCar(redCar, blueCar, !yellowCar)}
+          onClick={() => handlerCar('yellowCar', !yellowCar)}
           type="button"
         >
           Move
@@ -53,5 +54,7 @@ function Cars() {
     </ContextCar.Consumer>
   )
 }
+}
 
 export default Cars;
+

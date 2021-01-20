@@ -18,7 +18,7 @@ class Cars extends React.Component {
           alt="red car"
         />
         <button
-          onClick={() => handlerCar( !redCar, blueCar, yellowCar)}
+          onClick={ () => handlerCar('redCar', !redCar) }
           type="button"
         >
           Move
@@ -31,7 +31,7 @@ class Cars extends React.Component {
           alt="blue car"
         />
         <button
-          onClick={() => handlerCar(redCar, !blueCar, yellowCar)}
+          onClick={() => handlerCar('blueCar', !blueCar)}
           type="button"
         >
           Move
@@ -44,7 +44,7 @@ class Cars extends React.Component {
           alt="yellow car"
         />
         <button
-          onClick={() => handlerCar(redCar, blueCar, !yellowCar)}
+          onClick={() => handlerCar('yellowCar', !yellowCar)}
           type="button"
         >
           Move
