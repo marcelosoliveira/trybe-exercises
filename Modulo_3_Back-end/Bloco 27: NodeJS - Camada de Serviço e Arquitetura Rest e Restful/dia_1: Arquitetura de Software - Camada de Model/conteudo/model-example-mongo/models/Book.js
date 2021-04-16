@@ -53,7 +53,7 @@ const isValid = async (title, authorId) => {
     if (!title) return true;
     if (title.length < 3 ||  typeof title !== 'string') return true;
     if (authorId === undefined || typeof authorId !== 'number') return true;
-console.log()
+    
     const author = await Author.findById(authorId);
 
     //if (!author) return true;
