@@ -1,0 +1,21 @@
+apps:
+
+- name: app1
+  script: ./index.js
+  exp_backoff_restart_delay: 100
+  watch: ./
+
+- name: app2
+  script: ./index.js
+  exec_mode: cluster
+  instances: 2
+  env_prod:
+    ENVIRONMENT: PRODUCTION
+  env_homolog:
+    ENVIRONMENT: HOMOLOG
+
+- name: app3
+  script: ./index.js
+  max_memory_restart: 20M
+  restart_delay: 100
+  
