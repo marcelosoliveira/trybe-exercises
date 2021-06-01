@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+  <link rel="stylesheet" href="/css/product.css">
+  <title>Exercise Chat</title>
+</head>
+
+<body>
+  <h1>R$ Leilão de Centavos</h1>
+  <div id="app" class="columns">
+    <div class="column">
+      <div class="tweet">
+        <div class="box">
+          <article class="media">
+            <div class="media-content">
+              <div class="content">
+                <p>
+                  <strong>Celular</strong>
+                  <br>
+                  <div class="media-left">
+                    <figure class="image is-64x64">
+                      <img src="https://www.eletrosom.com/media/catalog/product/cache/a993071877238ba83e5c418c85b48faf/c/e/celular_samsung_galaxy_a01_core_4__1.jpg" alt="Image">
+                    </figure>
+                  </div>
+                  <div>
+                    <label class="label-preco">R$<span id="price-span-cel">21,00</span></label>
+                  </div>                  
+                  <div>
+                    <button id="button-cel" >Dar um lance</button>
+                  </div>                  
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="box">
+          <article class="media">
+            <div class="media-content">
+              <div class="content">
+                <p>
+                  <strong>TV</strong>
+                  <br>
+                  <div class="media-left">
+                    <figure class="image is-64x64">
+                      <img src="https://images.samsung.com/is/image/samsung/africa-pt-fhd-t5300-ua43t5300auxly-frontblack-243729049?$720_576_PNG$" alt="Image">
+                    </figure>
+                  </div>
+                  <div>
+                    <label class="label-preco">R$<span id="price-span-tv">59,00</span></label>
+                  </div>                  
+                  <div>
+                    <button id="button-tv" >Dar um lance</button>
+                  </div>                  
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="box">
+          <article class="media">
+            <div class="media-content">
+              <div class="content">
+                <p>
+                  <strong>NotBook</strong>
+                  <br>
+                  <div class="media-left">
+                    <figure class="image is-64x64">
+                      <img src="https://acerstore.vteximg.com.br/arquivos/ids/157525-900-900/A514-53-54_SSD_01.jpg?v=637396830724770000" alt="Image">
+                    </figure>
+                  </div>
+                  <div>
+                    <label class="label-preco">R$<span id="price-span-not">72,00</span></label>
+                  </div>                  
+                  <div>
+                    <button id="button-not" >Dar um lance</button>
+                  </div>                  
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./js/product.js"></script>
+</body>
+</html>
