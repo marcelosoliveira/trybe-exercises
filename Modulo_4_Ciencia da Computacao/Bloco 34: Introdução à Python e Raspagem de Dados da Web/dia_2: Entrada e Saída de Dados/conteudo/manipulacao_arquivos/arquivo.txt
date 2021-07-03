@@ -1,0 +1,7 @@
+Nome      Idade
+Maria      45
+Miguel     33
+Marcelo    34
+Marcio     33
+Raphael    10
+Ana Marcia 60
